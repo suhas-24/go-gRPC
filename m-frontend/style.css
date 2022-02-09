@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.shape{
+    border: 2px solid red;
+    height: 200px;
+    width: 200px;
+    display: none;
+    position : relative;
+    background-color: aquamarine;
+}
