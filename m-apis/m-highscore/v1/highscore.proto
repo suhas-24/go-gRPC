@@ -1,0 +1,25 @@
+syntax = "proto3";
+package m.highscore.v1;
+
+option go_package = "game";
+
+//define API's
+
+service HighscoreService {
+    rpc GetHighscore(GetHighscoreRequest) returns (GetHighscoreResponse) {}
+    rpc SetHighscore(SetHighscoreRequest) returns (SetHighscoreResponse) {}
+}
+
+//define request and response types
+message SetHighscoreRequest {
+    double high_score = 1;
+}
+message SetHighscoreResponse {
+    bool set = 1;
+}
+message GetHighscoreRequest {
+    // can leave blank as it is repsonse
+}
+message GetHighscoreResponse {
+    double high_score = 1;
+}
